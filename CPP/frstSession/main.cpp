@@ -4,11 +4,11 @@ class Yello {
 
     private : 
         float price ; 
-        char  *brand;
+        string brand;
 
     public :
         Yello() {
-            cout << "Sbah l khyr " <<endl;
+            cout << "Sbah l khyr The constructor has been called " <<endl;
             price = 120.369; 
             brand= "sidi ali azzouz" ; 
         }
@@ -19,20 +19,23 @@ class Yello {
 
 
         void show() {
-            cout << "the price is  :  " << price << " and the brand is " << brand ;   
+            cout << "the price is  :  " << price << " and the brand is " << brand << endl;   
         }
 
 
 
 
-
+    
 };
 
 
 int main () {
 
 
-    Yello nothing;
-    nothing.show();
+    Yello *nothing;
+    nothing = new Yello();
+    nothing->show();
 
+    delete nothing;
+    return 0 ; 
 }
