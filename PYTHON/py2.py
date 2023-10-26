@@ -6,21 +6,50 @@ class Person :
         self.phone = phone
         self.email = email
 
+    def __str__(self) -> str:
+        return f"Full name : {self.fname} {self.lname} Phone is :  {self.phone} with email : {self.email}"
+
 
 class Travaileur (Person) :
     def __init__(self, id:str) :
         self.id = id
     def __str__(self) -> str:
         return f"Full name : {self.fname} {self.lname} Phone is :  {self.phone} with email : {self.email} width ID {self.id}" 
-   
+
+
+class Scientific ( Travaileur) :
+    def __init__(self, speciality:str) :
+        #super().__init__()
+        self.speciality = speciality
+    def __str__(self) -> str:
+        return f"Full name : {self.fname} {self.lname} Phone is :  {self.phone} with email : {self.email} width ID {self.id} and speciality {self.speciality}"
 # // Alaa barka 
 
 
-
-Alaa = Travaileur("1234567890")
+Alaa = Scientific("Computer Science")
 Alaa.email = "mralaabarka@gmail.com"
 Alaa.fname = "Alaa"
 Alaa.lname = "Barka"
 Alaa.phone = "0634567890"
+Alaa.id = "123456789"
 
-print(Alaa)
+
+Elyes = Person (
+    fname = "Elyes",
+    lname = "Sayeh",
+    phone = "0634567890",
+    email = "layes@gmail.com"
+)
+
+
+Monji = Travaileur("1236"
+)
+Monji.fname = "Monji"
+Monji.lname = "Sayeh"
+Monji.email = "monji@gmail.com"
+Monji.phone = "0634567890"
+
+print("Person : ", Elyes)
+print("Scientist : ", Alaa)
+print("Regular Person : ",Monji)
+
