@@ -19,11 +19,9 @@ class Travaileur (Person) :
 
 class Scientific ( Travaileur) :
     def __init__(self, speciality:str) :
-        #super().__init__()
         self.speciality = speciality
     def __str__(self) -> str:
         return f"Full name : {self.fname} {self.lname} Phone is :  {self.phone} with email : {self.email} width ID {self.id} and speciality {self.speciality}"
-# // Alaa barka 
 
 
 Alaa = Scientific("Computer Science")
@@ -48,6 +46,8 @@ Monji.fname = "Monji"
 Monji.lname = "Sayeh"
 Monji.email = "monji@gmail.com"
 Monji.phone = "0634567890"
+#make a car class
+
 
 print("Person : ", Elyes)
 print("Scientist : ", Alaa)
