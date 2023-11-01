@@ -1,4 +1,4 @@
-package TP1.EX1;
+package JAVA.TP1.FRST.EX1;
 
 public class Main  {
     public static void main(String args[]) {

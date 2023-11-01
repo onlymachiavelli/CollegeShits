@@ -1,4 +1,4 @@
-package TP1.EX1;
+package JAVA.TP1.FRST.EX1;
 
 public class Car {
     public String brand; 

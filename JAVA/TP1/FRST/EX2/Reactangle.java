@@ -1,4 +1,4 @@
-package TP1.EX2;
+package JAVA.TP1.FRST.EX2;
 
 public class Reactangle {
     public float length ; 
