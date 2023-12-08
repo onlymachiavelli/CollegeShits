@@ -1,39 +1,27 @@
+from abc import ABC, abstractmethod  
 
-
-# Abstract class
-from abc import ABC, abstractmethod
-
-class Animal (ABC) : 
-    def __init__(self, name) :
+class Animal :
+    def __init__(self, name, color) :
         self.name = name
-    @abstractmethod
-    def Speak(self) :
-        pass
-
-
-class Dog(Animal) : 
-    def __init__(self, name, color) : 
-        super().__init__(name) 
         self.color = color
-    def Speak(self):
-        print(f"What the dog doing {self.name}")
-class Cat(Animal) :  
-    def __init__(self, name, color)  :
-        super().__init__(name) 
-        self.color = color
+    def speak(self) :
+        print(f"the animal {self.name} is Speaking")
+class Swimmer :
+    def __init__(self, size) :
+        self.size = size
+    def swim(self) :
+        print(f"the animal {self.name} is Swimming")
 
-    def Speak(self):
-        print(f"What the cat doing {self.name}")
+class Fish(Animal, Swimmer) : 
+    def __init__(self, name, color, size) :
+        Animal.__init__(self, name, color)
+        Swimmer.__init__(self, size)
+        self.name = name 
+        self.color = color 
+        self.size = size 
 
-#define dog 
-dog = Dog("Koredge", "black")
 
-# define cat
-cat = Cat("Besbes", "white")
 
-# call speak method
-dog.Speak()
 
-# call speak method
-cat.Speak()
-
+Houta = Fish("Peter" , "blue", "big")
+Houta.swim()
