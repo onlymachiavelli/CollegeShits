@@ -13,7 +13,6 @@ public class Main {
 
         for (int i = 0; i < vertices - 1; i++) {
             // Find the vertex with the minimum distance value
-            int minVertex = findMinVertex(distances, visited);
             visited[minVertex] = true;
 
             // Update distances of adjacent vertices
